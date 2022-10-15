@@ -1,4 +1,4 @@
-package Array
+package GoArray
 
 func (array *Array[T]) Filter(callback func(currentValue T, index int, self *Array[T]) bool) Array[T] {
 	list := New[T]()

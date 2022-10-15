@@ -1,4 +1,4 @@
-package Array
+package GoArray
 
 func (array *Array[T]) FindIndex(callback func(currentValue T, index int, self *Array[T]) bool) int {
 	for index, value := range array.Values {

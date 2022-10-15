@@ -1,4 +1,4 @@
-package Array
+package GoArray
 
 func (array *Array[T]) Concat(arrays ...Array[T]) Array[T] {
 	concat := New[T]()

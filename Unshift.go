@@ -1,4 +1,4 @@
-package Array
+package GoArray
 
 func (array *Array[T]) Unshift(values ...T) int {
 	list := New[T]()

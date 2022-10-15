@@ -1,4 +1,4 @@
-package Array
+package GoArray
 
 type Entry []interface{}
 
