@@ -1,4 +1,4 @@
-package GoArray
+package Array
 
 type Array[T any] struct {
 	Values []T

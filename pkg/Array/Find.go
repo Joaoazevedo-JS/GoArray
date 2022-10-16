@@ -1,4 +1,4 @@
-package GoArray
+package Array
 
 import "errors"
 

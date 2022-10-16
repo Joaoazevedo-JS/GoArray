@@ -1,4 +1,4 @@
-package GoArray
+package Array
 
 func (array *Array[T]) Pop() T {
 	var item T
