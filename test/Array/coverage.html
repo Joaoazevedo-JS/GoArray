@@ -55,31 +55,33 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/Joaoazevedo-JS/GoArray/pkg/Array/concat.go (0.0%)</option>
+				<option value="file0">github.com/Joaoazevedo-JS/GoArray/pkg/Array/concat.go (100.0%)</option>
 				
-				<option value="file1">github.com/Joaoazevedo-JS/GoArray/pkg/Array/entries.go (0.0%)</option>
+				<option value="file1">github.com/Joaoazevedo-JS/GoArray/pkg/Array/entries.go (100.0%)</option>
 				
-				<option value="file2">github.com/Joaoazevedo-JS/GoArray/pkg/Array/filter.go (0.0%)</option>
+				<option value="file2">github.com/Joaoazevedo-JS/GoArray/pkg/Array/filter.go (100.0%)</option>
 				
-				<option value="file3">github.com/Joaoazevedo-JS/GoArray/pkg/Array/find.go (0.0%)</option>
+				<option value="file3">github.com/Joaoazevedo-JS/GoArray/pkg/Array/find.go (100.0%)</option>
 				
-				<option value="file4">github.com/Joaoazevedo-JS/GoArray/pkg/Array/find_index.go (0.0%)</option>
+				<option value="file4">github.com/Joaoazevedo-JS/GoArray/pkg/Array/find_index.go (100.0%)</option>
 				
-				<option value="file5">github.com/Joaoazevedo-JS/GoArray/pkg/Array/for_each.go (0.0%)</option>
+				<option value="file5">github.com/Joaoazevedo-JS/GoArray/pkg/Array/for_each.go (100.0%)</option>
 				
-				<option value="file6">github.com/Joaoazevedo-JS/GoArray/pkg/Array/join.go (0.0%)</option>
+				<option value="file6">github.com/Joaoazevedo-JS/GoArray/pkg/Array/get.go (100.0%)</option>
 				
-				<option value="file7">github.com/Joaoazevedo-JS/GoArray/pkg/Array/length.go (100.0%)</option>
+				<option value="file7">github.com/Joaoazevedo-JS/GoArray/pkg/Array/join.go (100.0%)</option>
 				
-				<option value="file8">github.com/Joaoazevedo-JS/GoArray/pkg/Array/main.go (100.0%)</option>
+				<option value="file8">github.com/Joaoazevedo-JS/GoArray/pkg/Array/length.go (100.0%)</option>
 				
-				<option value="file9">github.com/Joaoazevedo-JS/GoArray/pkg/Array/pop.go (0.0%)</option>
+				<option value="file9">github.com/Joaoazevedo-JS/GoArray/pkg/Array/main.go (100.0%)</option>
 				
-				<option value="file10">github.com/Joaoazevedo-JS/GoArray/pkg/Array/push.go (100.0%)</option>
+				<option value="file10">github.com/Joaoazevedo-JS/GoArray/pkg/Array/pop.go (100.0%)</option>
 				
-				<option value="file11">github.com/Joaoazevedo-JS/GoArray/pkg/Array/to_string.go (0.0%)</option>
+				<option value="file11">github.com/Joaoazevedo-JS/GoArray/pkg/Array/push.go (100.0%)</option>
 				
-				<option value="file12">github.com/Joaoazevedo-JS/GoArray/pkg/Array/unshift.go (0.0%)</option>
+				<option value="file12">github.com/Joaoazevedo-JS/GoArray/pkg/Array/to_string.go (100.0%)</option>
+				
+				<option value="file13">github.com/Joaoazevedo-JS/GoArray/pkg/Array/unshift.go (100.0%)</option>
 				
 				</select>
 			</div>
@@ -95,16 +97,16 @@
 		
 		<pre class="file" id="file0" style="display: none">package Array
 
-func (array *Array[T]) Concat(arrays ...Array[T]) Array[T] <span class="cov0" title="0">{
+func (array *Array[T]) Concat(arrays ...Array[T]) Array[T] <span class="cov8" title="1">{
         concat := New[T]()
 
         concat.Push(array.Values...)
 
-        for _, value := range arrays </span><span class="cov0" title="0">{
+        for _, value := range arrays </span><span class="cov8" title="1">{
                 concat.Push(value.Values...)
         }</span>
 
-        <span class="cov0" title="0">return concat</span>
+        <span class="cov8" title="1">return concat</span>
 }
 </pre>
 		
@@ -112,34 +114,34 @@ func (array *Array[T]) Concat(arrays ...Array[T]) Array[T] <span class="cov0" ti
 
 type Entry []interface{}
 
-func (array *Array[T]) Entries() Array[Entry] <span class="cov0" title="0">{
+func (array *Array[T]) Entries() Array[Entry] <span class="cov8" title="1">{
         entries := New[Entry]()
 
-        array.ForEach(func(currentValue T, index int, _ *Array[T]) </span><span class="cov0" title="0">{
+        array.ForEach(func(currentValue T, index int, _ *Array[T]) </span><span class="cov8" title="1">{
                 entries.Push(Entry{
                         index,
                         currentValue,
                 })
         }</span>)
 
-        <span class="cov0" title="0">return entries</span>
+        <span class="cov8" title="1">return entries</span>
 }
 </pre>
 		
 		<pre class="file" id="file2" style="display: none">package Array
 
-func (array *Array[T]) Filter(callback func(currentValue T, index int, self *Array[T]) bool) Array[T] <span class="cov0" title="0">{
+func (array *Array[T]) Filter(callback func(currentValue T, index int, self *Array[T]) bool) Array[T] <span class="cov8" title="1">{
         list := New[T]()
 
-        for index, value := range array.Values </span><span class="cov0" title="0">{
+        for index, value := range array.Values </span><span class="cov8" title="1">{
                 add := callback(value, index, array)
 
-                if add </span><span class="cov0" title="0">{
+                if add </span><span class="cov8" title="1">{
                         list.Push(value)
                 }</span>
         }
 
-        <span class="cov0" title="0">return list</span>
+        <span class="cov8" title="1">return list</span>
 }
 </pre>
 		
@@ -147,40 +149,40 @@ func (array *Array[T]) Filter(callback func(currentValue T, index int, self *Arr
 
 import "errors"
 
-func (array *Array[T]) Find(callback func(currentValue T, index int, self *Array[T]) bool) (T, error) <span class="cov0" title="0">{
+func (array *Array[T]) Find(callback func(currentValue T, index int, self *Array[T]) bool) (T, error) <span class="cov8" title="1">{
         var undefined T
 
-        for index, value := range array.Values </span><span class="cov0" title="0">{
+        for index, value := range array.Values </span><span class="cov8" title="1">{
                 found := callback(value, index, array)
 
-                if found </span><span class="cov0" title="0">{
+                if found </span><span class="cov8" title="1">{
                         return value, nil
                 }</span>
         }
 
-        <span class="cov0" title="0">return undefined, errors.New("not Found")</span>
+        <span class="cov8" title="1">return undefined, errors.New("not Found")</span>
 }
 </pre>
 		
 		<pre class="file" id="file4" style="display: none">package Array
 
-func (array *Array[T]) FindIndex(callback func(currentValue T, index int, self *Array[T]) bool) int <span class="cov0" title="0">{
-        for index, value := range array.Values </span><span class="cov0" title="0">{
+func (array *Array[T]) FindIndex(callback func(currentValue T, index int, self *Array[T]) bool) int <span class="cov8" title="1">{
+        for index, value := range array.Values </span><span class="cov8" title="1">{
                 found := callback(value, index, array)
 
-                if found </span><span class="cov0" title="0">{
+                if found </span><span class="cov8" title="1">{
                         return index
                 }</span>
         }
 
-        <span class="cov0" title="0">return -1</span>
+        <span class="cov8" title="1">return -1</span>
 }
 </pre>
 		
 		<pre class="file" id="file5" style="display: none">package Array
 
-func (array *Array[T]) ForEach(callback func(currentValue T, index int, self *Array[T])) <span class="cov0" title="0">{
-        for index, value := range array.Values </span><span class="cov0" title="0">{
+func (array *Array[T]) ForEach(callback func(currentValue T, index int, self *Array[T])) <span class="cov8" title="1">{
+        for index, value := range array.Values </span><span class="cov8" title="1">{
                 callback(value, index, array)
         }</span>
 }
@@ -188,35 +190,50 @@ func (array *Array[T]) ForEach(callback func(currentValue T, index int, self *Ar
 		
 		<pre class="file" id="file6" style="display: none">package Array
 
+import "errors"
+
+func (array *Array[T]) Get(index int) (T, error) <span class="cov8" title="1">{
+        var undefined T
+
+        if index &lt; 0 || index &gt;= array.Length() </span><span class="cov8" title="1">{
+                return undefined, errors.New("index out of range")
+        }</span>
+
+        <span class="cov8" title="1">return array.Values[index], nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package Array
+
 import (
         "fmt"
         "strings"
 )
 
-func (array *Array[T]) Join(separators ...string) string <span class="cov0" title="0">{
+func (array *Array[T]) Join(separators ...string) string <span class="cov8" title="1">{
         separator := ","
         texts := New[string]()
 
-        if separators != nil </span><span class="cov0" title="0">{
+        if separators != nil </span><span class="cov8" title="1">{
                 separator = separators[0]
         }</span>
 
-        <span class="cov0" title="0">array.ForEach(func(currentValue T, index int, self *Array[T]) </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">array.ForEach(func(currentValue T, index int, self *Array[T]) </span><span class="cov8" title="1">{
                 texts.Push(fmt.Sprint(currentValue))
         }</span>)
 
-        <span class="cov0" title="0">return strings.Join(texts.Values, separator)</span>
+        <span class="cov8" title="1">return strings.Join(texts.Values, separator)</span>
 }
 </pre>
 		
-		<pre class="file" id="file7" style="display: none">package Array
+		<pre class="file" id="file8" style="display: none">package Array
 
 func (array *Array[T]) Length() int <span class="cov8" title="1">{
         return len(array.Values)
 }</span>
 </pre>
 		
-		<pre class="file" id="file8" style="display: none">package Array
+		<pre class="file" id="file9" style="display: none">package Array
 
 type Array[T any] struct {
         Values []T
@@ -233,25 +250,27 @@ func New[T any](values ...T) Array[T] <span class="cov8" title="1">{
 }</span>
 </pre>
 		
-		<pre class="file" id="file9" style="display: none">package Array
+		<pre class="file" id="file10" style="display: none">package Array
 
-func (array *Array[T]) Pop() T <span class="cov0" title="0">{
+import "errors"
+
+func (array *Array[T]) Pop() (T, error) <span class="cov8" title="1">{
         var item T
 
-        if array.Length() == 0 </span><span class="cov0" title="0">{
-                return item
+        if array.Length() == 0 </span><span class="cov8" title="1">{
+                return item, errors.New("Array is empty")
         }</span>
 
-        <span class="cov0" title="0">item = array.Values[array.Length()-1]
+        <span class="cov8" title="1">item = array.Values[array.Length()-1]
 
         // this will fail if length is zero
         array.Values = array.Values[:array.Length()-1]
 
-        return item</span>
+        return item, nil</span>
 }
 </pre>
 		
-		<pre class="file" id="file10" style="display: none">package Array
+		<pre class="file" id="file11" style="display: none">package Array
 
 func (array *Array[T]) Push(values ...T) int <span class="cov8" title="1">{
         array.Values = append(array.Values, values...)
@@ -260,16 +279,16 @@ func (array *Array[T]) Push(values ...T) int <span class="cov8" title="1">{
 }</span>
 </pre>
 		
-		<pre class="file" id="file11" style="display: none">package Array
+		<pre class="file" id="file12" style="display: none">package Array
 
-func (array *Array[T]) ToString() string <span class="cov0" title="0">{
+func (array *Array[T]) ToString() string <span class="cov8" title="1">{
         return array.Join()
 }</span>
 </pre>
 		
-		<pre class="file" id="file12" style="display: none">package Array
+		<pre class="file" id="file13" style="display: none">package Array
 
-func (array *Array[T]) Unshift(values ...T) int <span class="cov0" title="0">{
+func (array *Array[T]) Unshift(values ...T) int <span class="cov8" title="1">{
         list := New[T]()
 
         list.Push(values...)
