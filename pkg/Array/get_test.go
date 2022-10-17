@@ -15,12 +15,11 @@ func TestGet(t *testing.T) {
 	assert.Nil(t, err, "should not return an error")
 }
 
-// test array.get should return undefined if the index is out of bounds
+// test array.get should return an error if the index is out of bounds
 func TestGetOutOfBounds(t *testing.T) {
 	array := New[int](1, 2, 3)
 
-	value, err := array.Get(4)
+	_, err := array.Get(3)
 
-	assert.Equal(t, nil, value, "should return undefined if the index is out of bounds")
 	assert.NotNil(t, err, "should return an error if the index is out of bounds")
 }
