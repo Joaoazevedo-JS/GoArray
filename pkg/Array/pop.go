@@ -1,10 +1,12 @@
 package Array
 
-func (array *Array[T]) Pop() T {
+import "errors"
+
+func (array *Array[T]) Pop() (T, error) {
 	var item T
 
 	if array.Length() == 0 {
-		return item
+		return item, errors.New("Array is empty")
 	}
 
 	item = array.Values[array.Length()-1]
@@ -12,5 +14,5 @@ func (array *Array[T]) Pop() T {
 	// this will fail if length is zero
 	array.Values = array.Values[:array.Length()-1]
 
-	return item
+	return item, nil
 }
